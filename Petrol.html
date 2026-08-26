@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petrol 100 Paar Kyun? - Mindney</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&display=swap');
+body{margin:0;background:#FFFBEB;font-family:'Inter',sans-serif;color:#1a1a1a;line-height:1.6}
+.top{max-width:700px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;background:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #eee}
+.logo{font-weight:900;font-size:18px;letter-spacing:0.5px}
+.lang{display:flex;background:#f2f2f2;border-radius:20px;padding:3px}
+.lang button{border:0;padding:7px 14px;border-radius:20px;font-weight:800;font-size:11px;cursor:pointer;background:transparent;color:#888}
+.lang button.active{background:#000;color:#fff}
+.wrap{max-width:700px;margin:0 auto;padding:16px}
+.card{background:#fff;border:1px solid #f3e9c5;border-radius:20px;padding:22px;margin-bottom:16px}
+.hero h1{font-size:32px;font-weight:900;line-height:1.15;margin:0}
+.hero h1 span{background:#FF3B30;color:#fff;padding:0 8px;border-radius:6px}
+.sub{color:#666;font-size:14px;font-weight:500;margin-top:10px;line-height:1.7}
+.img{width:100%;height:190px;object-fit:cover;border-radius:14px;margin:14px 0}
+.badge{display:inline-block;background:#000;color:#FFEB3B;font-size:10px;font-weight:900;padding:4px 10px;border-radius:20px;letter-spacing:1px;margin-bottom:10px}
+h2{font-size:18px;font-weight:900;margin:0 0 12px 0}
+p{font-size:14px;font-weight:500;color:#222;margin:0 0 12px 0;line-height:1.8}
+.mark{background:#FFEB3B;padding:1px 6px;border-radius:4px;font-weight:800;color:#000}
+.mark.red{background:#111;color:#FFEB3B}
+.bill{background:#111;color:#fff;border-radius:14px;padding:14px;margin-top:14px}
+.row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed #2a2a2a;font-size:13px;font-weight:600}
+.row:last-child{border:0}
+.row.total{font-size:18px;font-weight:900;margin-top:6px}
+.row.total span:last-child{color:#FFEB3B;font-size:22px}
+.step{display:flex;gap:14px;margin:18px 0}
+.no{min-width:32px;height:32px;background:#000;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;flex-shrink:0}
+.table{width:100%;border-collapse:collapse;font-size:13px;font-weight:700;margin-top:10px}
+.table th{text-align:left;color:#aaa;font-size:10px;padding:8px 0;border-bottom:1px solid #eee}
+.table td{padding:11px 0;border-bottom:1px solid #f5f5f5}
+.highlight{background:#FFF0F0;border:1px solid #ffcccc;border-radius:12px;padding:14px;font-size:13px;font-weight:700;text-align:center;margin-top:14px;color:#a00;line-height:1.6}
+.disclaimer{background:#f7f7f7;border:1px solid #e5e5e5;border-radius:14px;padding:14px;font-size:11px;color:#777;font-weight:500;line-height:1.6;margin-top:18px}
+.footer{text-align:center;padding:24px;font-size:11px;color:#aaa;font-weight:700}
+</style>
+</head>
+<body>
+
+<div class="top">
+<div class="logo">MINDNEY</div>
+<div class="lang">
+<button class="active" id="hBtn" onclick="setLang('hi')">हिंदी</button>
+<button id="eBtn" onclick="setLang('en')">ENGLISH</button>
+</div>
+</div>
+
+<div class="wrap">
+
+<div class="card hero">
+<div class="badge">CASE STUDY • 26 AUG 2026</div>
+<h1 id="h1">Petrol <span>100 ke paar</span> kaise pahucha?</h1>
+<p class="sub" id="sub1">Chaliye isko ekdum zero se samajhte hain, aasaan bhasha me, taaki ek 5 saal ka baccha bhi samajh jaye.</p>
+<img class="img" src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800">
+<div class="bill">
+<div class="row"><span id="b1">Asli Petrol ka daam</span><span>₹57.07</span></div>
+<div class="row"><span id="b2">Kendra ka Tax</span><span>₹19.90</span></div>
+<div class="row"><span id="b3">Rajya ka Tax</span><span>₹20.00</span></div>
+<div class="row"><span id="b4">Pump ka Commission</span><span>₹3.84</span></div>
+<div class="row total"><span id="b5">Aap dete ho</span><span>₹101</span></div>
+</div>
+</div>
+
+<div class="card">
+<h2 id="t2">Part 1: Petrol aata kahan se hai? Zero se samjho</h2>
+<p id="p1"></p>
+<p id="p2"></p>
+<img class="img" src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=800">
+<p id="p3"></p>
+<p id="p4"></p>
+</div>
+
+<div class="card">
+<h2 id="t3">Part 2: ₹57 ka ₹101 kaise banta hai?</h2>
+<p id="p5"></p>
+<div class="step"><div class="no">1</div><div><p id="s1"></p></div></div>
+<div class="step"><div class="no">2</div><div><p id="s2"></p></div></div>
+<div class="step"><div class="no">3</div><div><p id="s3"></p></div></div>
+<div class="highlight" id="hl"></div>
+</div>
+
+<div class="card">
+<h2 id="t4">Part 3: Pehle ₹70 tha, ab ₹101 kyun?</h2>
+<p id="p6"></p>
+<table class="table">
+<tr><th id="th1">Cheez</th><th>2014</th><th>2026</th></tr>
+<tr><td id="r1">Asli Petrol</td><td>₹35</td><td>₹57</td></tr>
+<tr><td id="r2">Kendra Tax</td><td>₹9</td><td id="r2v">₹20 Double</td></tr>
+<tr><td id="r3">Dollar</td><td>₹60</td><td id="r3v">₹84 Mehenga</td></tr>
+<tr><td><b>Final</b></td><td><b>₹70</b></td><td><b>₹101</b></td></tr>
+</table>
+<p id="p7" style="margin-top:12px"></p>
+<p id="p8"></p>
+<p id="p9"></p>
+<div class="disclaimer" id="disc"></div>
+</div>
+
+</div>
+
+<div class="footer">© 2026 MINDNEY • Research Based</div>
+
+<script>
+const data={
+hi:{
+h1:`Petrol <span>100 ke paar</span> kaise pahucha?`,
+sub1:`Chaliye isko ekdum zero se samajhte hain, aasaan bhasha me, taaki ek 5 saal ka baccha bhi samajh jaye.`,
+b1:`Asli Petrol ka daam`,b2:`Kendra ka Tax`,b3:`Rajya ka Tax`,b4:`Pump ka Commission`,b5:`Aap dete ho`,
+t2:`Part 1: Petrol aata kahan se hai? Zero se samjho`,
+p1:`Dekho, sabse pehle ye samjho petrol hai kya. Zameen ke andar, bahut gehraai me ek <span class="mark">kaala, chipchipa tel hota hai jise Crude Oil bolte hain</span>. Jaise paani zameen se nikalta hai, waise hi ye tel bhi. Lekin India ke paas ye tel bahut kam hai. Hum apne desh me <span class="mark">100 me se sirf 15 litre</span> nikaal paate hain.`,
+p2:`Toh baaki <span class="mark red">100 me se 85 litre hum bahar ke deshon se kharidte hain</span> - jaise Saudi Arab, Russia, Iraq se. Aur hum isko dollar me kharidte hain, rupaye me nahi. Isiliye jab dollar mehenga hota hai, petrol apne aap mehenga ho jata hai.`,
+p3:`Ab ye kaala tel direct bike me nahi dal sakte. Ye bahut ganda hota hai. Isko ek badi factory me le jaate hain jise <span class="mark">Refinery</span> bolte hain. Wahan isko 400 degree tak garam kiya jata hai, saaf kiya jata hai. Tab is kaale tel me se alag-alag cheezein nikalti hain - <span class="mark">petrol, diesel, hawai jahaj ka tel</span>. Yahan tak ek litre petrol banane ka kharcha hota hai sirf <span class="mark red">₹57</span>.`,
+p4:`<b>Toh socho, ₹57 ki cheez ₹101 ki kaise ban gayi? Ab yahan se asli kahani shuru hoti hai, jo hai Tax ki kahani.</b>`,
+t3:`Part 2: ₹57 ka petrol ₹101 kaise banta hai?`,
+p5:`Ab ye ₹57 ka petrol refinery se nikal ke oil company ke paas jata hai. Ab uspar Sarkar apna tax lagati hai.`,
+s1:`<b>Kendra Sarkar ka Tax:</b> Kendra bolti hai, har litre par mujhe <span class="mark red">₹19.90 do</span>. Chahe petrol sasta ho ya mehenga, ye fixed hai. Isko <span class="mark">Excise Duty</span> bolte hain. Ab daam hua: 57 + 19.90 = ₹76.90.`,
+s2:`<b>Rajya Sarkar ka Tax:</b> Ab jo daam bacha ₹76.90, uspar aapki Rajya Sarkar bolti hai, mujhe ispar <span class="mark red">26.8% aur do</span>. UP me 26.8% hai, Maharashtra me 32% hai. Matlab ₹76.90 ka 26.8% = lagbhag <span class="mark">₹20</span>. Isko <span class="mark">VAT</span> bolte hain. Ye % me hai, isliye base daam badhte hi ye apne aap badh jata hai.`,
+s3:`<b>Pump wale ka kharcha:</b> Aakhir me pump wala bolta hai, mujhe <span class="mark">₹3.84</span> do. Ab final daam hua: 96.90 + 3.84 = <span class="mark red">₹101</span>.`,
+hl:`Yahi sach hai. Aapne <span style="background:#FFEB3B;color:#000;padding:2px 6px;border-radius:4px">₹57 ka petrol kharida, aur ₹44 Sarkar ko tax de diya</span>. 100 me se 44 rupaye sirf tax hai.`,
+t4:`Part 3: Pehle ₹70 tha, ab ₹101 kyun hai?`,
+p6:`Ab sabse bada sawal. 2014 me petrol ₹70 tha, ab ₹101 kyun hai? Kya tel mehenga ho gaya? Nahi. Chaliye data dekhte hain.`,
+th1:`Cheez`,r1:`Asli Petrol`,r2:`Kendra Tax`,r2v:`<span class="mark red">₹20 Double</span>`,r3:`Dollar`,r3v:`<span class="mark red">₹84 Mehenga</span>`,
+p7:`Asli kaaran ye hai: <span class="mark">2015-16 me jab crude oil duniya me bahut sasta ho gaya tha, $110 se gir ke $30 ho gaya tha</span>, tab petrol ka daam ₹30-35 hona chahiye tha. Par Sarkar ne petrol sasta nahi kiya, balki uspar <span class="mark red">Tax ₹9 se badha ke ₹32 kar diya</span>. Matlab crude sasta hua, par tax utna hi bada diya, to aapko fayda mila hi nahi.`,
+p8:`Dusra kaaran, <span class="mark">Dollar ₹60 se ₹84 ho gaya</span>. Hum dollar me tel kharidte hain, to same tel ke liye humein ₹24 zyada dena pad raha hai.`,
+p9:`Isiliye asli petrol sirf ₹22 mehenga hua (35 se 57), par <span class="mark red">Tax ₹24 se ₹40 ho gaya</span>. Isiliye daam ₹70 se ₹101 ho gaya.`,
+disc:`<b>⚠️ Disclaimer:</b> Ye saari jaankari public data par based hai - PPAC, IOCL aur PRS India ki report se. Ye sirf educational purpose ke liye hai. Petrol ke daam roz badalte hain aur har rajya me alag hote hain. Latest rate apne pump ya sarkari website par check karein.<br><br><b>Source:</b> PPAC, Govt. of India`
+},
+en:{
+h1:`How Did Petrol <span>Cross 100?</span>`,
+sub1:`Let's understand it from zero, in simple language, so even a 5-year-old can understand.`,
+b1:`Base Petrol Price`,b2:`Central Tax`,b3:`State Tax`,b4:`Pump Commission`,b5:`You Pay`,
+t2:`Part 1: Where does petrol come from? From zero`,
+p1:`First understand what petrol is. Inside the earth, there is a <span class="mark">black, sticky oil called Crude Oil</span>. Like water comes from ground, this oil also comes. But India has very little of it. We produce only <span class="mark">15 litres out of 100</span> in our country.`,
+p2:`So remaining <span class="mark red">85 litres out of 100 we buy from outside</span> - like Saudi Arabia, Russia, Iraq. And we buy it in dollars, not rupees. That's why when dollar becomes costly, petrol automatically becomes costly.`,
+p3:`Now you can't put this black oil directly in bike. It's very dirty. It goes to a big factory called <span class="mark">Refinery</span>. There it is heated to 400 degrees and cleaned. Then from this black oil, different things come out - <span class="mark">petrol, diesel, jet fuel</span>. Till here, cost of 1 litre petrol is only <span class="mark red">₹57</span>.`,
+p4:`<b>So think, how did a ₹57 thing become ₹101? Now the real story starts, which is the story of Tax.</b>`,
+t3:`Part 2: How does ₹57 become ₹101?`,
+p5:`Now this ₹57 petrol goes from refinery to oil company. Now Govt puts its tax on it.`,
+s1:`<b>Central Govt Tax:</b> Centre says, give me <span class="mark red">₹19.90 on every litre</span>. Whether petrol is cheap or costly, it's fixed. It's called <span class="mark">Excise Duty</span>. Now price: 57 + 19.90 = ₹76.90.`,
+s2:`<b>State Govt Tax:</b> Now on remaining ₹76.90, your State Govt says, give me <span class="mark red">26.8% more</span> on it. In UP it's 26.8%, in Maharashtra 32%. Means 26.8% of ₹76.90 = approx <span class="mark">₹20</span>. It's called <span class="mark">VAT</span>. It's in %, so when base price increases, it automatically increases.`,
+s3:`<b>Pump Owner Cost:</b> Finally pump owner says, give me <span class="mark">₹3.84</span> for rent, light, staff. Now final price: 96.90 + 3.84 = <span class="mark red">₹101</span>.`,
+hl:`This is the truth. You bought petrol for <span style="background:#FFEB3B;color:#000;padding:2px 6px;border-radius:4px">₹57 and paid ₹44 as tax</span>. Out of 100 rupees, 44 rupees is only tax.`,
+t4:`Part 3: Why was it ₹70 before and ₹101 now?`,
+p6:`Now the biggest question. In 2014 petrol was ₹70, why ₹101 now? Did oil become costly? No. Let's see data.`,
+th1:`Item`,r1:`Base Petrol`,r2:`Central Tax`,r2v:`<span class="mark red">₹20 Double</span>`,r3:`Dollar`,r3v:`<span class="mark red">₹84 Costly</span>`,
+p7:`Real reason is: <span class="mark">In 2015-16 when crude oil became very cheap in world, from $110 to $30</span>, petrol should have been ₹30-35. But Govt did not make it cheap, instead <span class="mark red">increased Tax from ₹9 to ₹32</span>. Means crude became cheap, but tax was increased by same amount, so you never got benefit.`,
+p8:`Second reason, <span class="mark">Dollar went from ₹60 to ₹84</span>. We buy oil in dollars, so for same oil we have to pay ₹24 extra.`,
+p9:`That's why base petrol became costly by only ₹22 (35 to 57), but <span class="mark red">Tax went from ₹24 to ₹40</span>. That's why price went from ₹70 to ₹101.`,
+disc:`<b>⚠️ Disclaimer:</b> All info is based on public data - from PPAC, IOCL and PRS India reports. This page is for educational purpose only. Fuel prices change daily and vary by state. Please check latest rate at your nearest pump or govt website.<br><br><b>Source:</b> PPAC, Govt. of India`
+}
+};
+
+function setLang(l){
+document.getElementById('h1').innerHTML=data[l].h1;
+document.getElementById('sub1').innerText=data[l].sub1;
+document.getElementById('b1').innerText=data[l].b1;document.getElementById('b2').innerText=data[l].b2;document.getElementById('b3').innerText=data[l].b3;document.getElementById('b4').innerText=data[l].b4;document.getElementById('b5').innerText=data[l].b5;
+document.getElementById('t2').innerHTML=data[l].t2;document.getElementById('p1').innerHTML=data[l].p1;document.getElementById('p2').innerHTML=data[l].p2;document.getElementById('p3').innerHTML=data[l].p3;document.getElementById('p4').innerHTML=data[l].p4;
+document.getElementById('t3').innerHTML=data[l].t3;document.getElementById('p5').innerHTML=data[l].p5;document.getElementById('s1').innerHTML=data[l].s1;document.getElementById('s2').innerHTML=data[l].s2;document.getElementById('s3').innerHTML=data[l].s3;document.getElementById('hl').innerHTML=data[l].hl;
+document.getElementById('t4').innerHTML=data[l].t4;document.getElementById('p6').innerHTML=data[l].p6;document.getElementById('th1').innerHTML=data[l].th1;document.getElementById('r1').innerHTML=data[l].r1;document.getElementById('r2').innerHTML=data[l].r2;document.getElementById('r2v').innerHTML=data[l].r2v;document.getElementById('r3').innerHTML=data[l].r3;document.getElementById('r3v').innerHTML=data[l].r3v;document.getElementById('p7').innerHTML=data[l].p7;document.getElementById('p8').innerHTML=data[l].p8;document.getElementById('p9').innerHTML=data[l].p9;document.getElementById('disc').innerHTML=data[l].disc;
+document.getElementById('hBtn').classList.toggle('active',l==='hi');
+document.getElementById('eBtn').classList.toggle('active',l==='en');
+}
+setLang('hi');
+</script>
+<!-- BACK TO LINKPAGE BUTTON -->
+<div style="text-align:center; margin-top:20px; margin-bottom:10px;">
+<a href="index.html" style="display:inline-block; background:#000; color:#FFEB3B; padding:12px 26px; border-radius:30px; font-weight:900; font-size:13px; text-decoration:none; letter-spacing:0.5px;">
+← BACK TO LINK PAGE
+</a>
+</div>
+</body>
+  </html>
