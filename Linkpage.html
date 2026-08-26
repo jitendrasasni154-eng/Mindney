@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mindney Link Page</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&display=swap');
+body{margin:0;background:#FFFBEB;font-family:'Inter',sans-serif;color:#111}
+.top{max-width:620px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;background:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #eee}
+.logo{font-weight:900;font-size:18px;display:flex;align-items:center;gap:8px}
+.logo span{background:#000;color:#FFEB3B;padding:4px 10px;border-radius:6px;font-size:16px}
+.lang{display:flex;background:#f2f2f2;border-radius:20px;padding:3px}
+.lang button{border:0;padding:7px 14px;border-radius:20px;font-weight:800;font-size:12px;cursor:pointer;background:transparent;color:#888}
+.lang button.active{background:#000;color:#fff}
+.wrap{max-width:620px;margin:0 auto;padding:16px}
+.card{background:#fff;border:1px solid #f0e6c8;border-radius:22px;padding:20px;margin-bottom:16px;position:relative;display:block;text-decoration:none;color:#000;transition:0.2s}
+.card:active{transform:scale(0.98)}
+.card.date{font-size:12px;font-weight:800;letter-spacing:0.5px;margin-bottom:12px;display:flex;align-items:center;gap:8px;color:#888}
+.dot{width:10px;height:10px;border-radius:50%;background:#FF3B30;display:inline-block}
+.card h2{font-size:26px;font-weight:900;line-height:1.15;margin:0 0 8px 0}
+.card p{font-size:14px;font-weight:600;color:#555;margin:0}
+.arrow{position:absolute;right:20px;top:55%;font-size:20px;opacity:0.5}
+.footer-box{background:#fff;border:1px solid #f0e6c8;border-radius:20px;padding:20px;margin-top:24px;text-align:center}
+.footer-box h3{margin:0 0 8px 0;font-size:16px;font-weight:900}
+.footer-box p{font-size:12px;font-weight:500;color:#666;line-height:1.6;margin:0 0 12px 0}
+.copy{border-top:1px solid #eee;padding-top:12px;margin-top:12px;font-size:11px;font-weight:700;color:#aaa;letter-spacing:0.5px}
+</style>
+</head>
+<body>
+
+<div class="top">
+<div class="logo">MINDNEY <span>LINK PAGE</span></div>
+<div class="lang">
+<button class="active" id="hBtn" onclick="setLang('hi')">हिंदी</button>
+<button id="eBtn" onclick="setLang('en')">EN</button>
+</div>
+</div>
+
+<div class="wrap">
+
+<!-- PETROL - P bada kiya -->
+<a href="Petrol.html" class="card">
+<div class="date"><span class="dot"></span><span id="d1">Trending Today</span></div>
+<h2 id="h1">Petrol 100 Ke Paar Kyun Ho Gaya? ⛽</h2>
+<p id="p1">2 min me samjho tax ka khel</p>
+<span class="arrow">→</span>
+</a>
+
+<!-- CHEENI - C bada kiya -->
+<a href="Cheeni.html" class="card">
+<div class="date" id="d2">24 AUG 2026</div>
+<h2 id="h2">Cheeni Mehngi Kyun Ho Gayi? 🍬</h2>
+<p id="p2">Ganna sasta, cheeni mehngi kaise?</p>
+<span class="arrow">→</span>
+</a>
+
+<!-- FOOTER -->
+<div class="footer-box">
+<h3 id="f1">MINDNEY LINK PAGE kya hai?</h3>
+<p id="f2">Yahan hum roz ki khabron ko ekdum simple bhasha me samjhate hain. No bakwaas, sirf data aur sach.</p>
+<p id="f3">Har khabar research ke saath, PPAC, RBI, Govt reports se li gayi hai.</p>
+<div class="copy">
+<span id="copy">©️ 2026 MINDNEY. All Rights Reserved.<br>Made with ❤️ in India | For Educational Purpose Only</span>
+</div>
+</div>
+
+</div>
+
+<script>
+const L={
+hi:{
+d1:`Trending Today`,h1:`Petrol 100 Ke Paar Kyun Ho Gaya? ⛽`,p1:`2 min me samjho tax ka khel`,
+d2:`24 AUG 2026`,h2:`Cheeni Mehngi Kyun Ho Gayi? 🍬`,p2:`Ganna sasta, cheeni mehngi kaise?`,
+f1:`MINDNEY LINK PAGE kya hai?`,f2:`Yahan hum roz ki khabron ko ekdum simple bhasha me samjhate hain. No bakwaas, sirf data aur sach.`,f3:`Har khabar research ke saath, PPAC, RBI, Govt reports se li gayi hai.`,
+copy:`©️ 2026 MINDNEY. All Rights Reserved.<br>Made with ❤️ in India | For Educational Purpose Only`
+},
+en:{
+d1:`Trending Today`,h1:`Why Did Petrol Cross 100? ⛽`,p1:`Understand tax game in 2 mins`,
+d2:`24 AUG 2026`,h2:`Why Did Sugar Become Costly? 🍬`,p2:`Cane cheap, sugar costly how?`,
+f1:`What is MINDNEY LINK PAGE?`,f2:`Here we explain daily news in super simple language. No bakwaas, only data and truth.`,f3:`Every news is researched from PPAC, RBI, Govt reports.`,
+copy:`©️ 2026 MINDNEY. All Rights Reserved.<br>Made with ❤️ in India | For Educational Purpose Only`
+}
+};
+function setLang(l){
+document.getElementById('d1').innerText=L[l].d1;document.getElementById('h1').innerText=L[l].h1;document.getElementById('p1').innerText=L[l].p1;
+document.getElementById('d2').innerText=L[l].d2;document.getElementById('h2').innerText=L[l].h2;document.getElementById('p2').innerText=L[l].p2;
+document.getElementById('f1').innerText=L[l].f1;document.getElementById('f2').innerText=L[l].f2;document.getElementById('f3').innerText=L[l].f3;
+document.getElementById('copy').innerHTML=L[l].copy;
+document.getElementById('hBtn').classList.toggle('active',l==='hi');
+document.getElementById('eBtn').classList.toggle('active',l==='en');
+}
+</script>
+
+</body>
+</html>
