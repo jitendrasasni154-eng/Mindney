@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 1 - Mindney</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Manrope',sans-serif; background:#F9F7FF; color:#181818;}
+  .nav{max-width:800px; margin:auto; padding:16px; display:flex; justify-content:space-between; align-items:center;}
+  .logo{font-weight:800; font-size:12px; letter-spacing:1px;} .logo span{background:#111; color:#FFD60A; padding:4px 10px; border-radius:20px; margin-left:5px;}
+  .pill{display:flex; background:#fff; border:1px solid #e9e2ff; border-radius:100px; padding:3px;}
+  .pill button{border:0; background:0; padding:7px 14px; border-radius:100px; font-weight:800; font-size:12px; cursor:pointer;} .pill button.on{background:#6C5CE7; color:#fff;}
+  .wrap{max-width:720px; margin:auto; padding:0 16px 80px;}
+  .hero{background:white; border-radius:28px; padding:28px; border:1px solid #ece6ff;}
+  .tag{background:#6C5CE7; color:#fff; font-size:10px; letter-spacing:2px; padding:6px 12px; border-radius:100px; display:inline-block; margin-bottom:14px; font-weight:800;}
+  h1{font-size:38px; line-height:1.1; letter-spacing:-1.5px; font-weight:800;} h1 span{background:#F0EDFF; color:#6C5CE7; padding:0 8px; border-radius:10px;}
+  .lead{color:#666; margin-top:12px; font-size:18px;}
+  .card{border-radius:22px; padding:22px; margin-top:16px; border:1px solid #ddd;}
+  .card img{width:100%; border-radius:16px; margin-bottom:14px; border:1px solid #eee;}
+  .card h3{font-size:20px; margin-bottom:8px;} .card p{font-size:17px; line-height:1.7;}
+  .y{background:#FFF176; padding:2px 6px; border-radius:5px; font-weight:800;}
+  .r{background:#FFCDD2; padding:2px 6px; border-radius:5px; color:#b71c1c; font-weight:800;}
+  .g{border:2px dashed #2e7d32; background:#E8F5E9; border-radius:12px; padding:12px; margin-top:12px;}
+  .c1{background:#FFF9C4; border-color:#f6e25a;} .c2{background:#E3F2FF; border-color:#90c2ff;} .c3{background:#DFF5E1; border-color:#8ed69e;} .c4{background:#111; color:#fff; border-color:#111;} .c4 p{color:#aaa;} .c4 b{color:#FFD60A;}
+  .dis{font-size:11px; color:#888; background:white; border-radius:14px; padding:16px; margin-top:20px; text-align:center; border:1px solid #eee;}
+  .en{display:none} body.is-en .en{display:block} body.is-en .hi{display:none}
+</style>
+</head>
+<body>
+<div class="nav"><div class="logo">PRESENT BY <span>MINDNEY</span></div><div class="pill"><button id="bh" class="on" onclick="L('hi')">हिन्दी</button><button id="be" onclick="L('en')">EN</button></div></div>
+<div class="wrap">
+  <div class="hero">
+    <div class="tag">CHAPTER 01</div>
+    <div class="hi"><h1>Business karna <span>dukaan nahi,</span> problem solve karna hai.</h1><p class="lead">Is ek line me poora business chhupa hai. 90% log isko galat samajhte hai, isiliye fail hote hai.</p></div>
+    <div class="en"><h1>Business is not <span>opening a shop,</span> it's solving a problem.</h1><p class="lead">This one line has whole business hidden. 90% people get it wrong, that's why they fail.</p></div>
+  </div>
+
+  <div class="card c1">
+    <img src="IMAGE_1_TIRED_KIDS.jpg">
+    <div class="hi"><h3>🥵 Step 1: Pyaas hai (Problem dhoondho)</h3><p>Socho maidaan me 20 bacche khel rahe hai. Garmi tez hai. Sabko pyaas lagi hai. Paani ka nal kharab hai, ghar door hai. Sab pareshan hai, khelna band ho gaya hai. <br><br>Yehi <span class="r">PROBLEM</span> hai. Business ki bhasha me isko <b>Demand</b> kehte hai. Jab tak dard nahi hai, business nahi hai. Pehle dard ko dekho, usko feel karo. Tumhare aas paas bhi aise 100 dard hai.</p><div class="g">👉 Simple me: Bina pyaas ke paani ka koi matlab nahi.</div></div>
+    <div class="en"><h3>🥵 Step 1: Thirst is there (Find Problem)</h3><p>20 kids in ground, very hot, everyone thirsty. Tap broken, home far. Game stopped. This is <span class="r">PROBLEM</span>. In business this is called Demand. No pain, no business.</p></div>
+  </div>
+
+  <div class="card c2">
+    <img src="IMAGE_2_KID_WITH_JUG.jpg">
+    <div class="hi"><h3>💧 Step 2: Paani laaye (Apni skill se solution do)</h3><p>Ab ek baccha dimag lagata hai. Wo sochta hai "mai daud sakta hu". Wo bhaag ke ghar se ek bada jug aur glass le aata hai. Aur sabko thanda paani pilata hai. <br><br>Usne kya kiya? Usne apni <span class="y">skill (daudna)</span> se dusro ka dard khatam kiya. Yehi <b>SOLUTION</b> hai. Tumhari skill coding ho sakti hai, video banana ho sakta hai, bolna ho sakta hai. Bas us skill se kisi ka dard khatam karo.</p><div class="g">👉 Simple me: Tumhe jo aata hai, usi se kisi ki help karo.</div></div>
+    <div class="en"><h3>💧 Step 2: Brought Water (Give Solution)</h3><p>One kid thinks "I can run". He brings big jug and glasses. He solved pain with his skill. This is <b>SOLUTION</b>. Your skill can be coding, video, speaking. Use it to help.</p></div>
+  </div>
+
+  <div class="card c3">
+    <img src="IMAGE_3_THANK_YOU.jpg">
+    <div class="hi"><h3>💰 Step 3: Inaam mila (Business ban gaya)</h3><p>Ab sab bacche khush hai. Khel fir se shuru ho gaya hai. Sab us bacche ko bolte hai "Thank you! Ye le 10 rupaye, tune hamari madad ki". <br><br>Us bacche ne paise nahi maange the. Paise uski <span class="y">help ka inaam</span> hai. Yahi business hai. <br><br><b>Galat tarika:</b> Pehle bottle kharido, sticker lagao, fir bolo "kharido". Koi nahi kharidega.<br><b>Sahi tarika:</b> Pehle pyaas dhoondho, fir paani do. Paise apne aap aa jayenge.</p><div class="g">👉 Simple me: Business paise ke liye nahi, problem solve karne ke liye hota hai. Paise toh bonus hai.</div></div>
+    <div class="en"><h3>💰 Step 3: Got Reward (Business is done)</h3><p>Now kids happy, game started again. They say "Thank you! Take 10 Rs". He didn't ask for money. Money is reward for help. That's business.</p></div>
+  </div>
+
+  <div class="card c4">
+    <div class="hi"><h3>🔥 Ab tumhari baari - Real Life Example</h3><p><b>Dard:</b> Mawana me Sharma ji ki kirana dukaan hai. Customer aate hai par online order nahi le paate.<br><b>Tumhari Skill:</b> Tumhe website banana aata hai.<br><b>Solution:</b> Tum ek simple page bana dete ho jisme "WhatsApp pe Order Karo" button hai.<br><b>Business:</b> Sharma ji khush, roz 5 order extra. Tumhe 2000 rupaye dete hai.<br><br>Zomato ne bhookh ka dard, Ola ne auto ka dard khatam kiya. <b>Tumhe bhi aas paas ka ek dard dhoondhna hai.</b></p></div>
+    <div class="en"><h3>🔥 Your Turn - Real Example</h3><p><b>Pain:</b> Grocery shop can't take online orders.<br><b>Your Skill:</b> You know website.<br><b>Business:</b> You make WhatsApp order site, charge 2000. Simple.</p></div>
+  </div>
+
+  <div class="dis"><b>Disclaimer:</b> Ye content sirf education ke liye hai. Ye financial advice nahi hai. Business me risk hota hai. Apna research khud karein. Examples sirf samjhane ke liye hai. <br><br>© Present by Mindney</div>
+</div>
+<script>function L(l){document.body.className=l==='en'?'is-en':'';document.getElementById('bh').classList.toggle('on',l==='hi');document.getElementById('be').classList.toggle('on',l==='en');}</script>
+</body>
+</html>
