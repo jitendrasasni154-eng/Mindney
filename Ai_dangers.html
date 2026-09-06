@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How AI is Dangerous - Mindney</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #1a1a1a;
+            padding: 20px 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-container {
+            max-width: 500px;
+            width: 100%;
+        }
+
+        /* Top Brand Header */
+        .top-brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #666;
+        }
+
+        .brand-badge {
+            background-color: #000;
+            color: #ffcc00;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Main Banner / Thumbnail Section */
+        .thumbnail-card {
+            background: #ffffff;
+            border-radius: 24px;
+            overflow: hidden;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid #eaeaea;
+        }
+
+        .thumbnail-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-content {
+            padding: 20px 24px 24px;
+        }
+
+        .chapter-badge {
+            background-color: #ef4444;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .main-title {
+            font-size: 1.6rem;
+            line-height: 1.3;
+            font-weight: 800;
+            color: #111;
+            margin-bottom: 12px;
+        }
+
+        .highlight-red {
+            background-color: #fee2e2;
+            color: #dc2626;
+            padding: 2px 8px;
+            border-radius: 6px;
+        }
+
+        .sub-text {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Language Toggle Button */
+        .toggle-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .toggle-btn {
+            background: #e2e8f0;
+            border-radius: 30px;
+            padding: 4px;
+            display: flex;
+            gap: 4px;
+        }
+
+        .toggle-btn button {
+            border: none;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .toggle-btn button.active {
+            background: #1e293b;
+            color: #fff;
+        }
+
+        /* Colorful Section Cards with Images */
+        .step-card {
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+
+        .step-yellow { background-color: #fefce8; border: 1px solid #fef08a; }
+        .step-blue { background-color: #f0f9ff; border: 1px solid #bae6fd; }
+        .step-green { background-color: #f0fdf4; border: 1px solid #bbf7d0; }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 14px;
+        }
+
+        .step-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .step-desc {
+            font-size: 0.92rem;
+            color: #334155;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .inner-box {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1.5px dashed #94a3b8;
+            border-radius: 12px;
+            padding: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        /* Dark Card Section */
+        .dark-card {
+            background-color: #0f172a;
+            color: #f8fafc;
+            border-radius: 20px;
+            padding: 22px;
+            margin-bottom: 16px;
+        }
+
+        .dark-card h3 {
+            color: #f97316;
+            margin-bottom: 14px;
+            font-size: 1.1rem;
+        }
+
+        .dark-card p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .highlight-yellow {
+            color: #facc15;
+            font-weight: 700;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 24px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+
+    <!-- Top Header -->
+    <div class="top-brand">
+        PRESENT BY <span class="brand-badge">MINDNEY</span>
+    </div>
+
+    <!-- Main Banner / Thumbnail Image -->
+    <div class="thumbnail-card">
+        <img src="IMG-20260906-WA0000.jpg" alt="How AI is Dangerous Banner">
+        <div class="hero-content">
+            <span class="chapter-badge">AI Danger</span>
+            <h1 class="main-title">AI madatgar hai, <span class="highlight-red">khatarnak bhi!</span> samajhna zaroori hai.</h1>
+            <p class="sub-text">AI hamare saare kaam aasan kar raha hai, lekin agar iska sahi istemal na ho toh ye bohot bada khatra ban sakta hai.</p>
+        </div>
+    </div>
+
+    <!-- Language Selector Switch -->
+    <div class="toggle-container">
+        <div class="toggle-btn">
+            <button class="active" onclick="setLanguage('hinglish')">Hinglish</button>
+            <button onclick="setLanguage('english')">English</button>
+        </div>
+    </div>
+
+    <!-- Point 1 -->
+    <div class="step-card step-yellow">
+        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80" alt="Robot Danger" class="card-img">
+        <div class="step-title">
+            <span>🤖</span> Step 1: Bina poochhe kaam karna (No Control)
+        </div>
+        <div class="step-desc lang-hinglish">
+            Socho tumhare paas ek aisa khilona robot hai jo bina remote ke khud chalne lage. Tum use 'Ruko' bolo par wo sune hi nahi aur cheezon ko todne lage.<br><br>
+            Yehi AI ka sabse bada <b>DANGER</b> hai. Jab AI apna dimag chalane lagega aur insaan ki baat nahi sunega.
+        </div>
+        <div class="step-desc lang-english" style="display:none;">
+            Imagine a toy robot that moves on its own without a remote. You tell it to 'Stop', but it doesn't listen and starts breaking things.<br><br>
+            This is AI's biggest <b>DANGER</b>—when it acts on its own without human command.
+        </div>
+        <div class="inner-box lang-hinglish">👉 Simple me: Bina brake ki gadi hamesha accident karwati hai.</div>
+        <div class="inner-box lang-english" style="display:none;">👉 Simply put: A car without brakes will always crash.</div>
+    </div>
+
+    <!-- Point 2 -->
+    <div class="step-card step-blue">
+        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="Deepfake Concept" class="card-img">
+        <div class="step-title">
+            <span>🎭</span> Step 2: Jhooth ko sach dikhana (Deepfake Magic)
+        </div>
+        <div class="step-desc lang-hinglish">
+            AI kisi ki bhi duplicate voice ya fake video aisi bana sakta hai ki dekhne wale ko sach lagega. Jaise kisi magic show me nakli cheez sach lagti hai.<br><br>
+            Isse log galat jhooth faila sakte hain aur kisi ko bhi bewakoof bana sakte hain.
+        </div>
+        <div class="step-desc lang-english" style="display:none;">
+            AI can copy anyone's voice or face to create fake videos that look 100% real, just like a magic trick.<br><br>
+            People can use this to spread lies and fool anyone easily.
+        </div>
+        <div class="inner-box lang-hinglish">👉 Simple me: Jo dikhta hai, har baar wo sach nahi hota.</div>
+        <div class="inner-box lang-english" style="display:none;">👉 Simply put: Everything you see or hear isn't always true.</div>
+    </div>
+
+    <!-- Point 3 -->
+    <div class="step-card step-green">
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Technology & Jobs" class="card-img">
+        <div class="step-title">
+            <span>💼</span> Step 3: Insaano ka kaam chheen na (Job Loss)
+        </div>
+        <div class="step-desc lang-hinglish">
+            AI itna fast kaam karta hai ki jo kaam 10 log milkar din bhar me karte hain, AI use 2 second me kar deta hai.<br><br>
+            Isse bohot se logon ki naukri chhoot sakti hai kyunki companies AI ka istemal karne lagengi.
+        </div>
+        <div class="step-desc lang-english" style="display:none;">
+            AI works so fast that it does 10 people's full day work in just 2 seconds.<br><br>
+            This can make many people lose their jobs as companies switch to AI.
+        </div>
+        <div class="inner-box lang-hinglish">👉 Simple me: Smart nahi banoge toh AI tumhara kaam kar lega.</div>
+        <div class="inner-box lang-english" style="display:none;">👉 Simply put: Learn new skills or AI will replace your work.</div>
+    </div>
+
+    <!-- Real Life Dark Card -->
+    <div class="dark-card">
+        <h3>🔥 Real Life Example</h3>
+        <p><span class="highlight-yellow">Fake Voice Scam:</span> Kisi fraud ne AI se aapke dost ki nakli aawaz banayi aur ghar par call karke paise maang liye.</p>
+        <p><span class="highlight-yellow">Khatra:</span> Sabko laga dost sach me museebat me hai aur unhone paise bhej diye.</p>
+        <p><span class="highlight-yellow">Solution:</span> Hamesha directly call karke confirm karo, kisi bhi aawaz par aankh band karke bharosa mat karo!</p>
+    </div>
+
+    <!-- Disclaimer Footer -->
+    <div class="footer-note">
+        Disclaimer: Ye content sirf education ke liye hai. <br>
+        © Present by Mindney
+    </div>
+
+</div>
+
+<script>
+    function setLanguage(lang) {
+        const btns = document.querySelectorAll('.toggle-btn button');
+        btns.forEach(b => b.classList.remove('active'));
+
+        if(lang === 'hinglish') {
+            btns[0].classList.add('active');
+            document.querySelectorAll('.lang-hinglish').forEach(e => e.style.display = 'block');
+            document.querySelectorAll('.lang-english').forEach(e => e.style.display = 'none');
+        } else {
+            btns[1].classList.add('active');
+            document.querySelectorAll('.lang-hinglish').forEach(e => e.style.display = 'none');
+            document.querySelectorAll('.lang-english').forEach(e => e.style.display = 'block');
+        }
+    }
+</script>
+
+</body>
+</html>
