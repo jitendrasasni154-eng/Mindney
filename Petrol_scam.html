@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Great Petrol & Ethanol E20 Story - Mindney</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #1a1a1a;
+            padding: 20px 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-container {
+            max-width: 550px;
+            width: 100%;
+        }
+
+        /* Top Header Bar with Language Switcher */
+        .header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .top-brand {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #666;
+        }
+
+        .brand-badge {
+            background-color: #000;
+            color: #ffcc00;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .toggle-btn {
+            background: #e2e8f0;
+            border-radius: 30px;
+            padding: 3px;
+            display: flex;
+            gap: 2px;
+        }
+
+        .toggle-btn button {
+            border: none;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .toggle-btn button.active {
+            background: #1e293b;
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        /* Highlighted Thumbnail Section */
+        .thumbnail-card {
+            background: #ffffff;
+            border-radius: 24px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(249, 115, 22, 0.35), 0 4px 20px rgba(0,0,0,0.1);
+            border: 2px solid #f97316;
+            position: relative;
+        }
+
+        .thumbnail-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-content {
+            padding: 20px 24px 24px;
+        }
+
+        .chapter-badge {
+            background-color: #ef4444;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .main-title {
+            font-size: 1.6rem;
+            line-height: 1.3;
+            font-weight: 800;
+            color: #111;
+            margin-bottom: 12px;
+        }
+
+        .highlight-red {
+            background-color: #fee2e2;
+            color: #dc2626;
+            padding: 2px 8px;
+            border-radius: 6px;
+        }
+
+        .text-hl {
+            background-color: #fef08a;
+            color: #854d0e;
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .sub-text {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Step Cards */
+        .step-card {
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+
+        .step-yellow { background-color: #fefce8; border: 1px solid #fef08a; }
+        .step-blue { background-color: #f0f9ff; border: 1px solid #bae6fd; }
+        .step-purple { background-color: #faf5ff; border: 1px solid #e9d5ff; }
+        .step-green { background-color: #f0fdf4; border: 1px solid #bbf7d0; }
+
+        .card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 14px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .step-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .step-desc {
+            font-size: 0.95rem;
+            color: #334155;
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+
+        .inner-box {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1.5px dashed #94a3b8;
+            border-radius: 12px;
+            padding: 12px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        /* Global vs India Badges */
+        .scope-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .badge-global { background-color: #e0f2fe; color: #0369a1; }
+        .badge-india { background-color: #ffedd5; color: #c2410c; }
+
+        /* Dark Card Section */
+        .dark-card {
+            background-color: #0f172a;
+            color: #f8fafc;
+            border-radius: 20px;
+            padding: 22px;
+            margin-bottom: 20px;
+        }
+
+        .dark-card h3 {
+            color: #f97316;
+            margin-bottom: 14px;
+            font-size: 1.15rem;
+        }
+
+        .dark-card p {
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .highlight-yellow {
+            color: #facc15;
+            font-weight: 700;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 24px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+
+    <!-- Top Header Bar with Language Switcher -->
+    <div class="header-bar">
+        <div class="top-brand">
+            PRESENT BY <span class="brand-badge">MINDNEY</span>
+        </div>
+        <div class="toggle-btn">
+            <button id="btn-hinglish" class="active" onclick="setLanguage('hinglish')">Hinglish</button>
+            <button id="btn-english" onclick="setLanguage('english')">English</button>
+        </div>
+    </div>
+
+    <!-- Main Highlighted Banner -->
+    <div class="thumbnail-card">
+        <img src="IMG-20260906-WA2086.jpg" alt="Petrol vs Ethanol Controversy Banner">
+        <div class="hero-content">
+            <span class="chapter-badge lang-hinglish">Global vs India Economics</span>
+            <span class="chapter-badge lang-english" style="display:none;">Global vs India Economics</span>
+
+            <h1 class="main-title lang-hinglish">Petrol, Crude Oil & <span class="highlight-red">Ethanol E20:</span> Poori Kahani Aasan Bhasha Me!</h1>
+            <h1 class="main-title lang-english" style="display:none;">Petrol, Crude Oil & <span class="highlight-red">Ethanol E20:</span> The Complete Story Explained!</h1>
+
+            <p class="sub-text lang-hinglish">Samjhiye kaise duniya bhar me <span class="text-hl">Crude Oil</span> sasta hota hai, par India me <span class="text-hl">Petrol ke daam</span> nahi girte!</p>
+            <p class="sub-text lang-english" style="display:none;">Understand why global <span class="text-hl">crude oil prices</span> drop while <span class="text-hl">petrol prices</span> in India remain high.</p>
+        </div>
+    </div>
+
+    <!-- Step 1 Card -->
+    <div class="step-card step-yellow">
+        <span class="scope-badge badge-global lang-hinglish">Global Context</span>
+        <span class="scope-badge badge-global lang-english" style="display:none;">Global Context</span>
+
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" alt="Crude Oil Barrel Refinery" class="card-img">
+
+        <div class="step-title lang-hinglish">🛢️ Step 1: Kacha Tel (<span class="text-hl">Crude Oil</span>) Kya Hota Hai?</div>
+        <div class="step-title lang-english" style="display:none;">🛢️ Step 1: What is <span class="text-hl">Crude Oil</span>?</div>
+
+        <div class="step-desc lang-hinglish">
+            Socho jaise jameen ke andar se kaala gaadha paani nikalta hai, use <span class="text-hl">Crude Oil</span> (Kacha Tel) kehte hain. Is kache tel ko factory me process karke <b>Petrol</b>, <b>Diesel</b> aur <b>Kerosene</b> banaya jata hai.<br><br>
+            Duniya bhar ke desho me iska daam har din badalta rehta hai. Iska rate <span class="text-hl">Per Barrel</span> (approx <b>159 Liters</b>) me count hota hai.
+        </div>
+        <div class="step-desc lang-english" style="display:none;">
+            Imagine thick black oil extracted from underground—that is <span class="text-hl">Crude Oil</span>. Refineries process it into <b>Petrol</b>, <b>Diesel</b>, and <b>Jet Fuel</b>.<br><br>
+            Global prices fluctuate daily and are traded in units of <span class="text-hl">Per Barrel</span> (approx <b>159 Liters</b>).
+        </div>
+
+        <div class="inner-box lang-hinglish">👉 Simple me: <span class="text-hl">Kacha Tel</span> factory me jata hai aur <span class="text-hl">Petrol</span> ban kar nikalta hai.</div>
+        <div class="inner-box lang-english" style="display:none;">👉 Simply put: Raw <span class="text-hl">Crude</span> enters refinery and exits as usable <span class="text-hl">Petrol</span>.</div>
+    </div>
+
+    <!-- Step 2 Card -->
+    <div class="step-card step-blue">
+        <span class="scope-badge badge-india lang-hinglish">In India</span>
+        <span class="scope-badge badge-india lang-english" style="display:none;">In India</span>
+
+        <img src="https://images.unsplash.com/photo-1527018606416-a6745190ce65?auto=format&fit=crop&w=800&q=80" alt="Gas Station Fuel Pump" class="card-img">
+
+        <div class="step-title lang-hinglish">📉 Step 2: 2014 Me Kya Hua Aur Aaj Kya Hai?</div>
+        <div class="step-title lang-english" style="display:none;">📉 Step 2: What Happened Since 2014?</div>
+
+        <div class="step-desc lang-hinglish">
+            Year 2014 me international market me kacha tel bohot mehanga tha—<span class="text-hl">$115 per barrel</span>! Phir bhi India me petrol lagbhag <b>₹70–₹75/liter</b> bikta tha.<br><br>
+            Baad me kacha tel bohot sasta ho gaya (<span class="text-hl">$40–$60 per barrel</span>). Rules ke hisab se petrol <b>₹40–₹50</b> hona chahiye tha, lekin daam <span class="text-hl">₹100 ke paar</span> pahunch gaye!
+        </div>
+        <div class="step-desc lang-english" style="display:none;">
+            In 2014, global crude reached a high of <span class="text-hl">$115 per barrel</span>, yet petrol in India was <b>₹70–₹75/liter</b>.<br><br>
+            Later, crude crashed to <span class="text-hl">$40–$60 per barrel</span>. Logically, fuel prices should have dropped to <b>₹40–₹50</b>, but retail petrol crossed <span class="text-hl">₹100 instead</span>!
+        </div>
+
+        <div class="inner-box lang-hinglish">👉 Simple me: <span class="text-hl">Kacha tel sasta</span> hua, par <span class="text-hl">Petrol ka daam double</span> ho gaya.</div>
+        <div class="inner-box lang-english" style="display:none;">👉 Simply put: <span class="text-hl">Global oil got cheaper</span>, but <span class="text-hl">petrol became twice as costly</span>.</div>
+    </div>
+
+    <!-- Step 3 Card -->
+    <div class="step-card step-purple">
+        <span class="scope-badge badge-india lang-hinglish">In India</span>
+        <span class="scope-badge badge-india lang-english" style="display:none;">In India</span>
+
+        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80" alt="Taxes and Financial Growth" class="card-img">
+
+        <div class="step-title lang-hinglish">🏛️ Step 3: Tax Ka Khel - Petrol Sasta Kyun Nahi Hua?</div>
+        <div class="step-title lang-english" style="display:none;">🏛️ Step 3: The Tax Mechanism - Why Didn't Prices Drop?</div>
+
+        <div class="step-desc lang-hinglish">
+            Jab crude oil sasta hua, toh Government ne petrol par <span class="text-hl">Excise Duty (TAX)</span> bohot zyada badha diya.<br><br>
+            Aap jo <b>₹100 ka petrol</b> khareedte ho, usme asli petrol ka cost sirf <span class="text-hl">₹50–₹55</span> hota hai. Baaki ka <span class="text-hl">₹45–₹50 TAX</span> hota hai!
+        </div>
+        <div class="step-desc lang-english" style="display:none;">
+            When crude prices plunged, government duties and <span class="text-hl">Taxes</span> were heavily increased.<br><br>
+            Out of every <b>₹100 spent</b> at pump, baseline fuel cost is roughly <span class="text-hl">₹50–₹55</span>, while remaining is <span class="text-hl">Government Tax</span>!
+        </div>
+
+        <div class="inner-box lang-hinglish">👉 Simple me: <span class="text-hl">Aadha paisa fuel ka</span>, <span class="text-hl">Aadha paisa Government Tax</span>!</div>
+        <div class="inner-box lang-english" style="display:none;">👉 Simply put: <span class="text-hl">Half for fuel</span>, <span class="text-hl">Half directly to taxes</span>!</div>
+    </div>
+
+    <!-- Step 4 Card -->
+    <div class="step-card step-green">
+        <span class="scope-badge badge-global lang-hinglish">Global & India Policy</span>
+        <span class="scope-badge badge-global lang-english" style="display:none;">Global & India Policy</span>
+
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Sugarcane Farming for Ethanol" class="card-img">
+
+        <div class="step-title lang-hinglish">🌽 Step 4: <span class="text-hl">Ethanol E20</span> Kya Hai Aur Vaada Kya Tha?</div>
+        <div class="step-title lang-english" style="display:none;">🌽 Step 4: What is <span class="text-hl">E20 Ethanol Blending</span>?</div>
+
+        <div class="step-desc lang-hinglish">
+            <b>Ethanol</b> ek biofuel hai jo <span class="text-hl">Sugarcane (Ganna)</span> aur <span class="text-hl">Corn (Makka)</span> se banta hai. Plan tha ki <b>80% Petrol + 20% Ethanol</b> milakar <span class="text-hl">E20 Fuel</span> banayein.<br><br>
+            <b>Vaada:</b> Ethanol cheap hai, toh petrol sasta milega.<br><br>
+            <b>Asliyat:</b> E20 petrol poore desh me bik raha hai, par daam <span class="text-hl">1 rupaya bhi kam nahi hua</span>!
+        </div>
+        <div class="step-desc lang-english" style="display:none;">
+            <b>Ethanol</b> is a biofuel distilled from <span class="text-hl">Sugarcane</span> and <span class="text-hl">Maize</span>. Under E20 policy, petrol is blended with <span class="text-hl">20% Ethanol</span>.<br><br>
+            <b>The Promise:</b> Lower production cost & cheaper retail fuel.<br><br>
+            <b>The Reality:</b> E20 is widely used, yet retail prices <span class="text-hl">didn't see any price reduction</span>!
+        </div>
+
+        <div class="inner-box lang-hinglish">👉 Simple me: <span class="text-hl">Blending se cost kam hui</span>, par <span class="text-hl">public ko discount nahi mila</span>.</div>
+        <div class="inner-box lang-english" style="display:none;">👉 Simply put: <span class="text-hl">Production costs dropped</span>, but <span class="text-hl">consumers received no discount</span>.</div>
+    </div>
+
+    <!-- Step 5 Card -->
+    <div class="step-card step-yellow">
+        <span class="scope-badge badge-india lang-hinglish">In India</span>
+        <span class="scope-badge badge-india lang-english" style="display:none;">In India</span>
+
+        <img src="https://images.unsplash.com/photo-1587049352847-4a222e784d38?auto=format&fit=crop&w=800&q=80" alt="Sugar Production and Market" class="card-img">
+
+        <div class="step-title lang-hinglish">🍬 Step 5: Side Effect - <span class="text-hl">Sugar (Cheeni)</span> Mehangi Kyun Hui?</div>
+        <div class="step-title lang-english" style="display:none;">🍬 Step 5: Side Effect - Why Did <span class="text-hl">Sugar Prices Spike</span>?</div>
+
+        <div class="step-desc lang-hinglish">
+            Ethanol ke liye bohot saara ganna aur <span class="text-hl">Sugar Syrup</span> divert kar diya gaya. Isse khane wali cheeni ke liye ganna kam pad gaya!<br><br>
+            Supply kam hone se <span class="text-hl">Sugar prices rapidly rise</span> ho gaye. Government ko export ban karna pada tab jaakar rates control hue.
+        </div>
+        <div class="step-desc lang-english" style="display:none;">
+            Diverting sugarcane for ethanol limited supply for sugar refining.<br><br>
+            This bottleneck caused <span class="text-hl">domestic sugar inflation</span> before export bans stabilized rates.
+        </div>
+
+        <div class="inner-box lang-hinglish">👉 Simple me: <span class="text-hl">Fuel ke chakkar me</span> <span class="text-hl">Sugar bhi mehangi ho gayi</span>!</div>
+        <div class="inner-box lang-english" style="display:none;">👉 Simply put: <span class="text-hl">Biofuel push</span> accidentally triggered <span class="text-hl">sugar inflation</span>!</div>
+    </div>
+
+    <!-- Dark Summary Section -->
+    <div class="dark-card">
+        <h3 class="lang-hinglish">📊 Summary: Global vs India Perspective</h3>
+        <h3 class="lang-english" style="display:none;">📊 Summary: Global vs India Perspective</h3>
+
+        <p class="lang-hinglish"><span class="highlight-yellow">🌎 Global Market:</span> Crude oil sasta hone par petrol pump par <span class="text-hl">direct price cuts</span> hote hain.</p>
+        <p class="lang-english" style="display:none;"><span class="highlight-yellow">🌎 Global Market:</span> Lower crude prices directly lead to <span class="text-hl">lower pump rates</span>.</p>
+
+        <p class="lang-hinglish"><span class="highlight-yellow">🇮🇳 India Market:</span> High <span class="text-hl">Taxes & Adjustments</span> ki वजह se customer ko discount nahi milta.</p>
+        <p class="lang-english" style="display:none;"><span class="highlight-yellow">🇮🇳 India Market:</span> High <span class="text-hl">Taxes</span> absorb price cuts before reaching consumers.</p>
+
+        <p class="lang-hinglish"><span class="highlight-yellow">💡 Conclusion:</span> Import bill reduce hua, par <span class="text-hl">Public Expenses same rahe</span>.</p>
+        <p class="lang-english" style="display:none;"><span class="highlight-yellow">💡 Conclusion:</span> Import bills dropped, but <span class="text-hl">Retail prices remained unchanged</span>.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-note">
+        Disclaimer: Educational content based on public economic & market data. <br>
+        © Present by Mindney
+    </div>
+
+</div>
+
+<script>
+    function setLanguage(lang) {
+        const btnHinglish = document.getElementById('btn-hinglish');
+        const btnEnglish = document.getElementById('btn-english');
+
+        if(lang === 'hinglish') {
+            btnHinglish.classList.add('active');
+            btnEnglish.classList.remove('active');
+            document.querySelectorAll('.lang-hinglish').forEach(e => e.style.display = 'block');
+            document.querySelectorAll('.lang-english').forEach(e => e.style.display = 'none');
+        } else {
+            btnEnglish.classList.add('active');
+            btnHinglish.classList.remove('active');
+            document.querySelectorAll('.lang-hinglish').forEach(e => e.style.display = 'none');
+            document.querySelectorAll('.lang-english').forEach(e => e.style.display = 'block');
+        }
+    }
+</script>
+
+</body>
+</html>
