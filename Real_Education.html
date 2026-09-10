@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Real Meaning of Study and Education is Not Marks - Mindney</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Plus Jakarta Sans',sans-serif;background:#f8f9ff;color:#1a1a1a;line-height:1.7}
+  .container{max-width:750px;margin:0 auto;padding:20px}
+  .top-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px}
+  .badge{background:#eef2ff;color:#4f46e5;padding:6px 14px;border-radius:100px;font-size:13px;font-weight:700}
+  .toggle{display:flex;background:#fff;border:1px solid #e5e7eb;border-radius:100px;padding:4px;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
+  .toggle button{border:0;padding:8px 18px;border-radius:100px;font-weight:700;font-size:13px;cursor:pointer;transition:0.3s;background:transparent;color:#6b7280}
+  .toggle button.active{background:#111827;color:#fff}
+  .hero-img{width:100%;border-radius:20px;margin-bottom:24px;box-shadow:0 12px 40px rgba(0,0,0,0.15);display:block}
+  h1{font-size:34px;line-height:1.15;font-weight:800;color:#111827;margin-bottom:16px}
+  h1 span{color:#4f46e5}
+  .subtitle{font-size:17px;color:#6b7280;background:#fff;border-left:4px solid #4f46e5;padding:12px 16px;border-radius:0 12px 12px 0;margin-bottom:28px;font-style:italic}
+  .card{background:#fff;border:1px solid #eef0f6;border-radius:20px;padding:24px;margin-bottom:20px;box-shadow:0 8px 30px rgba(0,0,0,0.04)}
+  .card h2{font-size:20px;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+  .icon{width:36px;height:36px;background:#f3f4ff;border-radius:10px;display:grid;place-items:center;font-size:18px}
+  .highlight{background:linear-gradient(135deg,#4f46e5 0%,#7c3aed 100%);color:#fff;border-radius:20px;padding:24px;margin:28px 0}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+  .mini{background:rgba(255,255,255,0.15);padding:12px;border-radius:12px;font-size:14px}
+  .mini2{background:#f9fafb;border-radius:14px;padding:14px;font-size:14px}
+  .quote{text-align:center;padding:30px 20px;font-size:22px;font-weight:800;line-height:1.4;color:#4f46e5}
+  .hidden{display:none}
+  @media(max-width:600px){h1{font-size:26px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="top-bar">
+    <div class="badge">MINDNEY • DEEP THOUGHT</div>
+    <div class="toggle">
+      <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+      <button id="btn-hi" onclick="setLang('hi')">Hindi</button>
+    </div>
+  </div>
+
+  <!-- TERI THUMBNAIL IMAGE -->
+  <img class="hero-img" src="gpt-image-2_An_ultra-high-definition_16_9_cinematic_3D_split-screen_conceptual_render._On_th-0.jpg" alt="The Real Meaning of Education Is Not Marks">
+
+  <!-- ENGLISH CONTENT -->
+  <div id="content-en">
+    <h1>The Real Meaning of <span>Study and Education is Not Marks</span></h1>
+    <div class="subtitle">"Education is not about getting a degree, it's about making yourself capable of living life."</div>
+    <div class="card">
+      <h2><div class="icon">🎯</div> Percentage is The Biggest Scam</h2>
+      <p>After 10 years, no one will ask what was your 10th percentage. Your marksheet only tells how you wrote for 3 hours on one day. It never tells how wise you are in life, how you handle tough times, how you talk to people.</p><br>
+      <p><b>That's why percentage is a trap.</b> We get stuck in this loop and forget the real meaning of study.</p>
+    </div>
+    <div class="card">
+      <h2><div class="icon">💡</div> Study vs Education</h2>
+      <div class="grid">
+        <div class="mini2"><b>📚 Study = Work</b>Opening books, memorizing, giving exams. Taking information.</div>
+        <div class="mini2"><b>🧠 Education = Mindset</b>Understanding right and wrong, learning to think, understanding life. Transformation.</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <h3>What Real Education Teaches?</h3>
+      <p>Study tells you that the world is round. Education tells you how to live in that round world.</p>
+      <div class="grid">
+        <div class="mini">1. To Think - Don't follow the crowd blindly</div>
+        <div class="mini">2. To Question - Ask 'Why?' on everything</div>
+        <div class="mini">3. To Connect - Connect study with life</div>
+        <div class="mini">4. To Solve - Don't cry, find a solution</div>
+      </div>
+    </div>
+    <div class="quote">"Study can give you a job,<br>but Education teaches you how to live life."</div>
+  </div>
+
+  <!-- HINDI CONTENT -->
+  <div id="content-hi" class="hidden">
+    <h1>Padhai Ka Asli Matlab <span>Marks Nahi, Zindagi Hai</span></h1>
+    <div class="subtitle">"Padhai ka matlab apne aap ko is zindagi ko banane ke kabil banana hai."</div>
+    <div class="card">
+      <h2><div class="icon">🎯</div> Percentage Sabse Bada Scam Hai</h2>
+      <p>10 saal baad koi nahi puchega ki 10th me kitne percent aaye the. Marksheet sirf ye batati hai ki tune ek din 3 ghante me kaisa likha. Wo ye kabhi nahi batati ki tu zindagi me kitna samajhdar hai, tu mushkil time pe kaise ladta hai.</p><br>
+      <p><b>Isiliye percentage ek ganda loop hai.</b> Jisme hum fas jaate hain aur padhai ka asli matlab bhool jaate hain.</p>
+    </div>
+    <div class="card">
+      <h2><div class="icon">💡</div> Study vs Education</h2>
+      <div class="grid">
+        <div class="mini2"><b>📚 Study = Kaam</b>Kitab kholna, ratta maarna, exam dena. Information lena.</div>
+        <div class="mini2"><b>🧠 Education = Soch</b>Sahi-galat samajhna, sochna seekhna, zindagi samajhna.</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <h3>Asli Education Kya Sikhati Hai?</h3>
+      <p>Study batati hai duniya gol hai. Education samjhati hai us gol duniya me kaise jeena hai.</p>
+      <div class="grid">
+        <div class="mini">1. Sochna - Bheed ka hissa mat bano</div>
+        <div class="mini">2. Sawal Karna - Har baat par 'Kyun?'</div>
+        <div class="mini">3. Connect Karna - Life se jodna</div>
+        <div class="mini">4. Solution Nikalna - Rona nahi</div>
+      </div>
+    </div>
+    <div class="quote">"Study tumhe naukri dila sakti hai,<br>par Education tumhe zindagi jeena sikhati hai."</div>
+  </div>
+
+</div>
+
+<script>
+function setLang(lang){
+  document.getElementById('content-en').classList.toggle('hidden', lang!=='en');
+  document.getElementById('content-hi').classList.toggle('hidden', lang!=='hi');
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+  document.getElementById('btn-hi').classList.toggle('active', lang==='hi');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+</script>
+</body>
+</html>
