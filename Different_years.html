@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Different Countries Have Different Years? | Mindney</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap');
+body{margin:0;font-family:'Inter',sans-serif;background:#f8fbff;color:#1e293b;box-sizing:border-box}
+.top{display:flex;align-items:center;gap:10px;padding:12px 16px;background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 15px rgba(0,0,0,0.06)}
+.logo{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid #7c3aed}
+.wrap{max-width:820px;margin:0 auto;padding:14px 16px 30px 16px}
+.badge{display:inline-block;background:#ede9fe;color:#5b21b6;font-weight:800;font-size:11px;padding:7px 14px;border-radius:20px;border:1px solid #c4b5fd}
+.lang-box{display:flex;background:#fff;border:1px solid #cbd5e1;border-radius:30px;padding:4px;width:fit-content;margin:14px 0 18px 0}
+.lang-btn{border:none;padding:8px 22px;border-radius:30px;font-weight:800;font-size:13px;cursor:pointer}
+.active{background:#7c3aed;color:#fff} .inactive{background:transparent;color:#64748b}
+.title{font-size:26px;line-height:1.3;margin:18px 0 0 0;font-weight:900}
+.title span{background:linear-gradient(90deg,#7c3aed,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.quote{background:#fff;border-left:5px solid #7c3aed;border-radius:14px;padding:14px 18px;margin:14px 0;color:#64748b;font-style:italic}
+.card{background:#fff;border-radius:22px;padding:22px;margin:18px 0;box-shadow:0 6px 20px rgba(0,0,0,0.05);border:1px solid #ede9fe;line-height:1.85;font-size:14.9px}
+.color-card{background:linear-gradient(135deg,#7c3aed 0%,#3b82f6 50%,#06b6d4 100%);border-radius:22px;padding:20px;color:#fff;margin:20px 0}
+.p-item{background:rgba(255,255,255,0.22);border-radius:12px;padding:12px 14px;margin:10px 0;font-size:14px;font-weight:700;display:flex;justify-content:space-between}
+.thumb-wrap{margin:16px auto 22px auto;padding:4px;background:linear-gradient(135deg,#7c3aed,#3b82f6,#06b6d4,#8b5cf6);border-radius:24px;box-shadow:0 12px 30px rgba(124,58,237,0.3);max-width:100%;box-sizing:border-box;display:block}
+.thumb-wrap img{width:100%;height:auto;display:block;border-radius:20px;border:3px solid #fff;box-sizing:border-box;margin:0 auto;object-fit:cover;object-position:center}
+.num{display:inline-block;background:#7c3aed;color:#fff;width:30px;height:30px;text-align:center;border-radius:50%;font-size:14px;line-height:30px;margin-right:8px;font-weight:900}
+.hidden{display:none}
+.hl-y{background:#fef9c3;padding:1px 6px;border-radius:6px;color:#854d0e;font-weight:800}
+.hl-b{background:#dbeafe;padding:1px 6px;border-radius:6px;color:#1e40af;font-weight:800}
+.hl-p{background:#ffe4e6;padding:1px 6px;border-radius:6px;color:#9f1239;font-weight:800}
+.year-badge{display:inline-block;padding:4px 12px;border-radius:20px;font-weight:900;font-size:13px;margin-left:8px}
+.big-quote{text-align:center;color:#7c3aed;font-weight:900;font-size:19px;margin:26px 10px;line-height:1.4}
+</style>
+</head>
+<body>
+<div class="top">
+<img src="IMG-20260829-WA5291.jpg" class="logo" alt="Mindney">
+<div style="font-weight:800">MINDNEY</div>
+</div>
+<div class="wrap">
+<div class="badge">MINDNEY • WORLD FACTS</div>
+
+<div class="thumb-wrap">
+<img src="gpt-image-2_A_dramatic_cinematic_16_9_visual_concept_showing_a_world_map_split_into_distinct-0.jpg" alt="Gregorian vs Ethiopian vs Thai Calendar">
+</div>
+
+<div class="lang-box">
+<button id="b-en" class="lang-btn active" onclick="show('en')">English</button>
+<button id="b-hi" class="lang-btn inactive" onclick="show('hi')">Hindi</button>
+</div>
+
+<div id="en">
+<h1 class="title">Why The Same Day Is <span>Different Year In Different Countries?</span></h1>
+<div class="quote">"For us it's 2026, but for someone in Thailand it's 2569 and for someone in Ethiopia it's still 2019 - same day, different years."</div>
+
+<div class="card"><b><span class="num">1</span> Ethiopia - Still in 2019</b> <span class="year-badge" style="background:#dcfce7;color:#166534">2019 EC</span><br><br>They follow <span class="hl-b">Coptic Calendar</span>, 7-8 years behind. They have 13 months. They never accepted Pope's correction in 1582.</div>
+<div class="card"><b><span class="num">2</span> Thailand - Year 2569</b> <span class="year-badge" style="background:#ede9fe;color:#5b21b6">2569 BE</span><br><br>Counts from Lord Buddha's Death. <span class="hl-y">Gregorian + 543 = Buddhist Era</span>. So 2026+543=2569.</div>
+<div class="card"><b><span class="num">3</span> Japan - Reiwa 8</b> <span class="year-badge" style="background:#fef9c3;color:#854d0e">Reiwa 8</span><br><br>New Emperor = New calendar. Reiwa started in 2019 with Emperor Naruhito.</div>
+<div class="card"><b><span class="num">4</span> Saudi / Islamic - 1448 AH</b> <span class="year-badge" style="background:#dbeafe;color:#1e40af">1448 Hijri</span><br><br>Starts from 622 AD migration of Prophet Muhammad. Moon calendar - 354 days, 11 days shorter.</div>
+<div class="card"><b><span class="num">5</span> Israel - 5787 AM</b> <span class="year-badge" style="background:#fee2e2;color:#9f1239">5787</span><br><br>Hebrew calendar counts from creation of world.</div>
+<div class="card"><b><span class="num">6</span> Iran - 1405 SH</b> <span class="year-badge" style="background:#dcfce7;color:#166534">1405</span><br><br>Solar Hijri - Starts from Prophet migration but counts Sun years. New Year Nowruz on 21 March.</div>
+<div class="card"><b><span class="num">7</span> North Korea - Juche 115</b> <span class="year-badge" style="background:#ffedd5;color:#9a3412">115</span><br><br>Counts from birth of Kim Il-sung 1912. So 2026-1911=115.</div>
+
+<div class="color-card">
+<h3 style="margin:0 0 12px 0">✅ Same Day, 7 Different Years</h3>
+<div class="p-item"><span>🇺🇳 Most World (Gregorian)</span><b>2026 AD</b></div>
+<div class="p-item"><span>🇹🇭 Thailand (Buddhist)</span><b>2569 BE</b></div>
+<div class="p-item"><span>🇸🇦 Saudi (Hijri)</span><b>1448 AH</b></div>
+<div class="p-item"><span>🇮🇱 Israel (Hebrew)</span><b>5787 AM</b></div>
+<div class="p-item"><span>🇪🇹 Ethiopia (Coptic)</span><b>2019 EC</b></div>
+<div class="p-item"><span>🇮🇷 Iran (Solar Hijri)</span><b>1405 SH</b></div>
+<div class="p-item"><span>🇯🇵 Japan (Reiwa)</span><b>Reiwa 8</b></div>
+</div>
+<div class="big-quote">"Calendar is not science. It's a story. Every country starts counting from the story they love the most."</div>
+</div>
+
+<div id="hi" class="hidden">
+<h1 class="title">Ek Hi Din Par <span>Duniya Me 7 Alag Saal Kyu?</span></h1>
+<div class="quote">"Humare liye 2026 hai, par Thailand me 2569 aur Ethiopia me 2019 - ek hi din, alag-alag saal."</div>
+<div class="card"><b><span class="num">1</span> Ethiopia - 2019</b><br>Unka calendar 7 saal peeche hai, 13 mahine hote hain.</div>
+<div class="card"><b><span class="num">2</span> Thailand - 2569</b><br>Buddha ki mrityu se ginta hai. 2026+543=2569.</div>
+<div class="card"><b><span class="num">3</span> Japan - Reiwa 8</b><br>Naye Raja ke saath naya saal.</div>
+<div class="card"><b><span class="num">4</span> Saudi - 1448</b><br>Chaand ka calendar, 354 din.</div>
+<div class="card"><b><span class="num">5</span> Israel - 5787</b><br>Duniya ke banne se counting.</div>
+<div class="card"><b><span class="num">6</span> Iran - 1405</b><br>Suraj wala Hijri, Nowruz 21 March.</div>
+<div class="card"><b><span class="num">7</span> North Korea - 115</b><br>Kim Il-sung ke janam se.</div>
+</div>
+
+<div style="margin-top:26px;padding:20px;background:#fff;border-radius:18px;border:1px solid #e2e8f0;text-align:center">
+<div style="font-weight:900;font-size:14px;color:#0f172a">© 2026 Mindney. All Rights Reserved.</div>
+<div style="font-size:12px;color:#64748b;margin-top:6px">Logo: <b>IMG-20260829-WA5291.jpg</b> & Thumbnail are copyrighted property of Mindney.</div>
+<div style="margin-top:12px;padding-top:12px;border-top:1px dashed #cbd5e1;font-size:11px;color:#94a3b8;text-align:left;line-height:1.6">
+<b>Disclaimer:</b> Content for educational purposes only. Hijri/Hebrew dates may vary by 1 day on moon sighting.
+</div>
+</div>
+</div>
+<script>
+function show(l){
+document.getElementById('en').classList.add('hidden');
+document.getElementById('hi').classList.add('hidden');
+document.getElementById(l).classList.remove('hidden');
+document.getElementById('b-en').className=l=='en'?'lang-btn active':'lang-btn inactive';
+document.getElementById('b-hi').className=l=='hi'?'lang-btn active':'lang-btn inactive';
+}
+</script>
+</body>
+</html>
