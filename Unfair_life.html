@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharat Me Badhta Apradh - MINDNEY</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#eef2ff;color:#1e293b}
+.hd{background:#fff;padding:13px 16px;display:flex;align-items:center;position:sticky;top:0;z-index:10;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.lg{width:42px;height:42px;min-width:42px;border-radius:50%;border:2.6px solid #e11d48;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center}
+.lg img{width:100%;height:100%;object-fit:cover}
+.lg-t{font-weight:800;font-size:21px;color:#111}
+.tag{margin:16px 16px 12px;display:inline-block;background:#ffe4e6;color:#e11d48;font-weight:700;font-size:11.5px;padding:8px 16px;border-radius:99px}
+.hero{margin:0 16px;border-radius:26px;padding:3px;background:linear-gradient(90deg,#e11d48,#f59e0b)}
+.hi{border-radius:23px;overflow:hidden;background:#0f172a;display:flex;align-items:center;justify-content:center;min-height:180px}
+.hi img{width:100%;height:auto;object-fit:contain;display:block}
+.tg{margin:16px;display:inline-flex;background:#fff;border-radius:99px;padding:5px;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.tg button{border:0;padding:9px 18px;border-radius:99px;font-weight:700;cursor:pointer;font-size:13.5px;transition:.2s}
+.a{background:#e11d48;color:#fff;box-shadow:0 2px 8px rgba(225,29,72,.4)}.ia{background:transparent;color:#64748b}
+.tt{margin:16px 16px 12px;font-size:28px;font-weight:900;line-height:1.2}
+.bl{color:#f59e0b}
+.qt{margin:0 16px 16px;background:#fff;border-left:5px solid #e11d48;border-radius:0 16px 16px 0;padding:14px 15px;font-style:italic;color:#475569;font-weight:600;font-size:15px;line-height:1.5}
+.cd{background:#fff;margin:0 16px 18px;border-radius:20px;padding:20px;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+.ch{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.no{width:40px;height:40px;min-width:40px;border-radius:50%;background:#e11d48;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+.cd h3{font-size:18.5px;font-weight:800;line-height:1.25}
+.bd{display:inline-block;padding:6px 12px;border-radius:99px;font-weight:800;font-size:11.5px;margin-bottom:12px}
+.r{background:#fee2e2;color:#991b1b}.g{background:#dcfce7;color:#14532d}.p{background:#f3e8ff;color:#6b21a8}.b{background:#dbeafe;color:#1e40af}.o{background:#ffedd5;color:#9a3412}
+.cd p{font-size:15.5px;line-height:1.82;color:#334155;font-weight:500}
+.hl{background:#fef08a;color:#713f12;padding:2px 8px;border-radius:6px;font-weight:800}
+.hl2{background:#fee2e2;color:#991b1b;padding:2px 8px;border-radius:6px;font-weight:800}
+.hl3{background:#dcfce7;color:#14532d;padding:2px 8px;border-radius:6px;font-weight:800}
+.proof{background:#f8fafc;border-radius:12px;padding:12px;margin-bottom:10px;border:1px solid #e2e8f0}
+.proof b{font-size:14px;display:block}
+.proof span{font-size:13px;color:#475569;line-height:1.5;display:block;margin:4px 0}
+.proof a{color:#e11d48;font-weight:800;font-size:12.5px;text-decoration:none;word-break:break-all}
+.fm{background:linear-gradient(135deg,#e11d48,#f59e0b);margin:0 16px 18px;border-radius:20px;padding:20px;color:#fff}
+.fr{background:rgba(255,255,255,.22);border-radius:12px;padding:12px 14px;display:flex;justify-content:space-between;margin-bottom:10px;font-size:14px;font-weight:600}
+.bq{margin:22px 16px;text-align:center;font-size:19px;font-weight:900;color:#e11d48;line-height:1.35}
+.act{margin:0 16px 16px;background:#fff;border-radius:16px;padding:12px;display:flex;justify-content:space-around;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+.act button{border:0;background:#f8fafc;padding:10px 18px;border-radius:99px;font-weight:700;display:flex;align-items:center;gap:6px;cursor:pointer;font-size:14px}
+.ft{background:#fff;margin:0 16px 24px;border-radius:16px;padding:14px;text-align:center;font-size:12px;color:#64748b;line-height:1.6}
+#content-hi{display:none}
+#content-en{display:block}
+</style>
+</head>
+<body>
+<div class="hd"><a href="#" class="logo"><div class="lg"><img src="https://raw.githubusercontent.com/jitendrasasni154-eng/Mindney/main/IMG-20260829-WA5291.jpg"></div><div class="lg-t">MINDNEY</div></a></div>
+
+<div class="tag">MINDNEY • POLITE & SIMPLE EXPLANATION</div>
+
+<div class="hero"><div class="hi"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800" alt="Bharat Safety"></div></div>
+
+<div class="tg">
+<button id="enBtn" class="a" onclick="setLang('en')">English</button>
+<button id="hiBtn" class="ia" onclick="setLang('hi')">Hindi - More Polite Hindi</button>
+</div>
+
+<div id="content-en">
+<div class="tt">Why Crime Is Increasing In India? <span class="bl">Real Reason & Simple Solution</span></div>
+<div class="qt">"Look, we all see daily news about theft and fights. So let's talk politely - why is this happening and how can we stay safe? No hate, only awareness."</div>
+
+<div class="cd"><div class="ch"><div class="no">1</div><h3>See, What's Actually Happening Around Us?</h3></div><div class="bd r">POLITE INTRO</div><p>Friends, if you open news daily, you will see some crime news for sure. So many people ask - is our country safe or not? See, my point is simple, this article is just to make you <span class="hl">aware and educated</span>. I am not blaming any government or any person here. Just let's understand the situation politely.</p></div>
+
+<div class="cd"><div class="ch"><div class="no">2</div><h3>First Reason - System Thoda Loose Hai</h3></div><div class="bd b">SYSTEM ISSUE</div><p>Look, sometimes what happens is, police or system takes too much time to take action. And when action is slow, some wrong people think - "chalo koi dar nahi hai". So they get more confident. <span class="hl2">If law is strict and fast, people will automatically have fear to do wrong.</span> That's the main thing. We need quick and strong action.</p></div>
+
+<div class="cd"><div class="ch"><div class="no">3</div><h3>Second Reason - Ghar Ka Mahaul Matters A Lot</h3></div><div class="bd p">FAMILY MATTERS</div><p>Second thing which I personally feel is - how a child is grown at home. See, if at home there is no proper guidance, no good values, and the child is always with wrong friends, then obviously he can go to wrong path. It's very simple - <b>Good upbringing = Good thinking.</b> So parents' role is very very important here.</p></div>
+
+<div class="cd" style="border:2px solid #e11d48;"><div class="ch"><div class="no">✓</div><h3>Official Sources - Where You Can Check</h3></div><div class="bd g">VERIFIED .GOV</div>
+<div class="proof"><b>1. NCRB Crime Data [NCRB.gov.in]</b><span>Official data for India.</span><a href="https://ncrb.gov.in/" target="_blank">→ ncrb.gov.in</a></div>
+<div class="proof"><b>2. Ministry of Home Affairs [MHA.gov.in]</b><span>Safety guidelines.</span><a href="https://www.mha.gov.in/" target="_blank">→ mha.gov.in</a></div>
+<div class="proof"><b>3. Emergency Help - 112 India</b><span>For any emergency, dial 112.</span><a href="https://112.gov.in/" target="_blank">→ 112.gov.in</a></div>
+</div>
+
+<div class="cd"><div class="ch"><div class="no">4</div><h3>Solution - How Can We Stay Safe?</h3></div><div class="bd o">SIMPLE SOLUTION</div><p>So what can we do? 3 simple things. <b>1. Be Aware:</b> Learn some basic self-defence, it's very useful. <b>2. Avoid Unnecessary Fights:</b> See, smart person always avoids fight with unknown people. No need to argue on road. <b>3. Support Strict Law:</b> We should all want that law should be strict so wrong people have fear. <span class="hl3">Simple formula - Be Aware + Stay Away From Fights + Respect Law.</span></p></div>
+
+<div class="cd"><div class="ch"><div class="no">5</div><h3>Final Message - Be Alert, Not Scared</h3></div><div class="bd g">FINAL NOTE</div><p>See friends, crime is there in every country, but we can reduce it. Don't be scared, just be alert. Don't go alone to unknown places at night, keep emergency numbers, and if you see something wrong, call 112. This article is only for education, to make you aware. So stay safe and keep your family safe.</p></div>
+
+<div class="fm"><h3>✅ Simple Breakdown</h3><div class="fr"><span>Problem</span><span>System Slow Sometimes</span></div><div class="fr"><span>Root Cause</span><span>Home Environment + Bad Company</span></div><div class="fr"><span>Prevention</span><span>Self Defence + Avoid Fights</span></div><div class="fr"><span>Solution</span><span>Strict Law + Citizen Alert</span></div></div>
+<div class="bq">"Samajhdari hi sabse badi safety hai - Jagruk raho, safe raho"</div>
+</div>
+
+<div id="content-hi">
+<div class="tt">India Me Crime Kyu Badh Raha Hai? <span class="bl">Asli Wajah Aur Simple Solution</span></div>
+<div class="qt">"Dekho, hum roz news me dekhte hai chori, ladai ke cases. Toh chaliye politely samajhte hai ki aisa kyu ho raha hai aur hum kaise safe reh sakte hai. Kisi ko blame nahi karna, bas samajhna hai."</div>
+<div class="cd"><div class="ch"><div class="no">1</div><h3>Dekho, Ho Kya Raha Hai Aas-Paas?</h3></div><div class="bd r">NORMAL BAAT</div><p>Dosto, agar aap daily news dekho toh koi na koi crime ki khabar toh aati hi hai. Toh log puchte hai, kya humara desh safe hai? Dekho mera point simple hai, ye article sirf aapko <span class="hl">jagruk karne ke liye hai</span>. Mai yahan kisi sarkar ya kisi vyakti ko blame nahi kar raha. Bas politely situation ko samajhte hai.</p></div>
+<div class="cd"><div class="ch"><div class="no">2</div><h3>Pehli Wajah - System Kabhi Kabhi Slow Ho Jata Hai</h3></div><div class="bd b">SYSTEM ISSUE</div><p>Dekho, kabhi kabhi kya hota hai, police ya system action lene me thoda time laga deta hai. Aur jab action slow hota hai, toh kuch galat log sochte hai - arey koi dar hi nahi hai. Toh unka confidence badh jata hai. <span class="hl2">Agar kanoon tez aur sakht hoga, toh galat kaam karne se pehle log 100 baar sochenge.</span> Yahi main baat hai.</p></div>
+<div class="cd"><div class="ch"><div class="no">3</div><h3>Dusri Wajah - Ghar Ka Mahaul Bahut Matter Karta Hai</h3></div><div class="bd p">FAMILY MATTERS</div><p>Dusri cheez jo mai personally feel karta hu - bachche ka ghar pe kaise parvarish ho raha hai. Dekho, agar ghar pe sahi guidance nahi hai, ache sanskar nahi hai, aur bachcha hamesha galat dosto ke saath hai, toh obviously wo galat raste pe ja sakta hai. Simple si baat hai - <b>Achi parvarish = Achi soch.</b> Isliye parents ka role bahut important hai.</p></div>
+<div class="cd"><div class="ch"><div class="no">4</div><h3>Solution Kya Hai - Hum Kaise Safe Rahe?</h3></div><div class="bd o">SOLUTION</div><p>Toh hum kya kar sakte hai? 3 simple cheezen. <b>1. Jagruk Bano:</b> Thoda bahut self-defence seekh lo, bahut kaam aata hai. <b>2. Faltu Ke Jhagdo Se Bacho:</b> Dekho, samajhdar aadmi hamesha anjaan logo se jhagda avoid karta hai. Road pe behes karne ka koi fayda nahi. <b>3. Sakht Kanoon Ko Support Karo:</b> Hum sabko chahiye ki kanoon sakht ho taaki galat logo me dar rahe.</p></div>
+<div class="cd"><div class="ch"><div class="no">5</div><h3>Last Baat - Daro Mat, Bas Alert Raho</h3></div><div class="bd g">FINAL</div><p>Dekho dosto, crime har desh me hota hai, par hum usko kam kar sakte hai. Darne ki zarurat nahi, bas alert rehne ki zarurat hai. Raat ko akela anjaan jagah mat jao, emergency number paas rakho, aur kuch galat dikhe toh 112 pe call karo. Ye article sirf education ke liye hai, aapko aware karne ke liye. Safe raho, apni family ko safe rakho.</p></div>
+</div>
+
+<div class="act">
+<button onclick="navigator.clipboard.writeText(location.href);alert('Link Copied!')">🔗 Copy Link</button>
+<button onclick="if(navigator.share){navigator.share({title:document.title,url:location.href})}else{alert(location.href)}">🚀 Share</button>
+<button onclick="alert('Comment coming soon!')">💬 Comment</button>
+</div>
+<div class="ft"><b>© 2026 MINDNEY</b><br>Educational Awareness Purpose Only<br><small>Sources: ncrb.gov.in | mha.gov.in | 112.gov.in | Disclaimer: Not to hurt any caste, religion, community or govt.</small></div>
+
+<script>
+function setLang(l){
+  var en=document.getElementById('content-en');
+  var hi=document.getElementById('content-hi');
+  var enB=document.getElementById('enBtn');
+  var hiB=document.getElementById('hiBtn');
+  if(l==='en'){en.style.display='block';hi.style.display='none';enB.className='a';hiB.className='ia';localStorage.setItem('mindney_lang','en');}
+  else{en.style.display='none';hi.style.display='block';enB.className='ia';hiB.className='a';localStorage.setItem('mindney_lang','hi');}
+  window.scrollTo({top:280,behavior:'smooth'});
+}
+(function(){
+  var saved=localStorage.getItem('mindney_lang');
+  if(saved==='hi'){setLang('hi');}
+})();
+</script>
+</body>
+</html>
